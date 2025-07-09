@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="imgs/eco.png" type="image/png">
+
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading EcoVibe...</p>
+    </div>
+    <nav id="navbar">
+        <div class="start">
+            <img src="imgs/eco_vibe_without_slogan-removebg-preview.png" alt="">
+        </div>
+
+        <div class="middle">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About us</a></li>
+                <li><a href="task.html">Tasks</a></li>
+                <li class="vip"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+
+        <div class="end">
+            <a href="https://www.nytimes.com/international/section/climate" target="_blank">Read more</a>
+            <img src="imgs/Heart_icon_red_hollow-removebg-preview.png" alt="">
+        </div>
+    </nav>
+    <div class="form">
+        <div class="left">
+            <form action="">
+                <label for="">Full-name</label>
+                <input type="text">
+                <label for="">E-mial</label>
+                <input type="text">
+                <label for="">Password</label>
+                <input type="text">
+                <label for="">Gender</label>
+                <input type="radio" style="width: 20px; display: inline; top: 7px;  position: relative;" name="gender" id="gender">
+                <label for="" style="display: inline;">Male</label><br>
+                <input type="radio" style="width: 20px; display: inline; top: 7px;  position: relative;" name="gender" id="gender">
+                <label for="" style="display: inline;">Female</label>
+                <label for="">Any massages ?</label>
+                <input type="text" class="massage">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="right">
+            <img src="imgs/eco.png" alt="">
+        </div>
+    </div>
+    <footer class="foot">
+        <h1>Eco vibe</h1>
+        <h3>Made by &copy koreem (CFO)</h3>
+        <h3>With the help of CEO, CMO, CS, HR, SCM</h3>
+    </footer>
+    <script>
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                const loading = document.getElementById("loading-screen");
+                loading.style.opacity = "0";
+
+                // Wait for the fade to finish, then hide and show content
+                setTimeout(() => {
+                    loading.style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }, 800); // match the CSS transition time
+            }, 1500); // delay before fade starts
+        });
+    </script>
+</body>
+</html>
