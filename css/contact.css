@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bg: #FAFAFA;
+    --pri: #4CAF50;
+    --hov: #2196F3;
+    --lightbg: #C8E6C9;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bg);
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #e8f5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Segoe UI', sans-serif;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.loader {
+    border: 6px solid #c8e6c9;
+    border-top: 6px solid #2e7d32;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#loading-screen p {
+    margin-top: 15px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    height: 14vh;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+nav li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    font-size: medium;
+    width: 17%;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px transparent solid;
+    padding: 5px;
+    top: -9px;
+    position: relative;
+}
+.vip{
+    border-bottom: 3px #2196F3 solid;
+    border-top: 3px transparent solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    font-size: medium;
+    width: 17%;
+    text-align: center;
+    border-radius: 0;
+}
+.vip:hover{
+    transition: 1s;
+    border: 3px #2196F3 solid;
+}
+nav li:hover{
+    transition: 1s;
+    color: var(--pri);
+    border: 3px var(--pri) solid;
+    transition: 1s;
+    border-radius: 15px;
+}
+nav a{
+    text-decoration: none;
+    color: #424242;
+}
+.start{
+    height: 100%;
+    width: 100px;
+    align-items: center;
+}
+.middle{
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    width: 500px;
+}
+.end{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.end > img{
+    width: 20%;
+    margin-left: 10px;
+
+}
+.start > img{
+    width: 100%;
+}
+.middle> ul{
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.end > a{
+    font-weight: 500;
+    color: red;
+}
+.form{
+    display: flex;
+    justify-content: space-evenly;
+    height: 120vh;
+    background: 		linear-gradient(to right, #fdfcfb, #e2d1c3);
+}
+input ,label{
+    display: block;
+}
+.right{
+    width: 40%;
+    top: 30vh;
+    position: relative;
+    height: 40vh;
+    left: -60px;
+}
+.left{
+    position: relative;
+    left: 10%;
+    width: 50%;
+    top: 20vh;
+    position: relative;
+}
+form{
+    color: var(--pri);
+}
+label{
+    margin-top: 30px;
+    margin-left: 4px;
+}
+input{
+    border: 2px var(--lightbg) solid;
+    border-radius: 20px;
+    height: 4vh;
+    width: 50%;
+    padding: 0 0 0 10px;
+    margin-top: 10px;
+}
+input:hover{
+    transition: 1s;
+    border-color: #2196F3;
+}
+input:focus{
+    outline-color: #2196F3;
+}
+.massage{
+    height: 15vh;
+    border-radius: 10px;
+}
+input[type=submit]{
+    height: 40px;
+    width: 25%;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+}
+input[type=submit]:hover{
+    background-color: #2196F3;
+    transition: 1s;
+}
+video{
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+.foot{
+    text-align: center;
+    background-color: rgb(34, 26, 108);
+    height: 25vh;
+    color: white;
+    position: relative;
+    padding-top: 10px;
+    width: 100%;
+}
+.right>img{
+    border-radius: 100%;
+    border: 4px #4CAF50 solid;
+}
+.right>img:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 25%);
+    transition: 1s;
+        border: 4px #2196F3 solid;
+}

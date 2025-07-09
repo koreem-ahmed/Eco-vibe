@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #FAFAFA;
+    --pri: #4CAF50;
+    --hov: #2196F3;
+    --lightbg: #C8E6C9;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #e8f5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Segoe UI', sans-serif;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.loader {
+    border: 6px solid #c8e6c9;
+    border-top: 6px solid #2e7d32;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#loading-screen p {
+    margin-top: 15px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: 14vh;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+nav li {
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    font-size: medium;
+    width: 17%;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px transparent solid;
+    padding: 5px;
+    top: -9px;
+    position: relative;
+}
+
+.vip {
+    border-bottom: 3px #2196F3 solid;
+    border-top: 3px transparent solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    font-size: medium;
+    width: 17%;
+    text-align: center;
+    border-radius: 0;
+}
+
+.vip:hover {
+    border: 3px #2196F3 solid;
+    transition: 1s;
+}
+
+nav li:hover {
+    color: var(--pri);
+    border: 3px var(--pri) solid;
+    transition: 1s;
+    border-radius: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #424242;
+}
+
+#navbar.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.start {
+    height: 100%;
+    width: 100px;
+    align-items: center;
+}
+
+.middle {
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    width: 500px;
+}
+
+.end {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.end>img {
+    width: 20%;
+    margin-left: 10px;
+
+}
+
+.start>img {
+    width: 100%;
+}
+
+.middle>ul {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.end>a {
+    font-weight: 500;
+    color: red;
+}
+
+.hero {
+    background: url(../imgs/ChatGPT\ Image\ Jul\ 7\,\ 2025\,\ 01_36_34\ AM.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.hero>h1 {
+    font-size: 70px;
+    font-weight: 600;
+    top: 70px;
+    position: relative;
+}
+
+.hero>h2 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    top: 50px;
+}
+
+.hero>button {
+    position: relative;
+    top: 160px;
+    padding: 20px;
+    background-color: #d9d9d948;
+    border: 2px black solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.hero>button:hover {
+    border-color: #8ba98c;
+    transition: 1s;
+    background-color: #4CAF50;
+}
+
+.hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hr>hr {
+    color: #D5D5D5;
+    width: 50%;
+}
+
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.right {
+    width: 40%;
+}
+
+.left {
+    width: 25%;
+    border-radius: 100%;
+}
+
+.left>img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.us {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.mp-div {
+    text-align: center;
+}
+
+.mp-div>h1 {
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+}
+
+.mp-div>button {
+    padding: 15px;
+    background-color: var(--pri);
+    border: 2px var(--pri) solid;
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    width: 200px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.mp-div>button:hover {
+    transition: 1s;
+    border: 2px black solid;
+    top: -5px;
+    color: #4CAF50;
+    background-color: #fff;
+
+}
+
+.mar-cont {
+    width: 100%;
+    overflow: hidden;
+    background: #f0f0f0;
+    padding: 10px 0;
+}
+
+.mar-track {
+    display: flex;
+    gap: 60px;
+    animation: scrollLeft 15s linear infinite;
+}
+
+.mar-track img {
+    width: 70px;
+    border-radius: 10px;
+}
+
+.sm-d {
+    display: flex;
+    align-items: center;
+    width: 330px;
+}
+
+.sm-d>p {
+    position: relative;
+    left: 20px;
+}
+
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.cards-cont {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+    gap: 40px;
+    height: 80vh;
+}
+
+.cd {
+    text-align: center;
+}
+
+.cd>h1 {
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.card {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 60vh;
+    border: 2px white;
+    border-radius: 30px;
+    background-color: var(--lightbg);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card:hover {
+    scale: 1.1;
+    transition: 1s;
+}
+
+.card>img {
+    width: 40%;
+}
+
+.card>button {
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 50px;
+    width: 50%;
+    margin-top: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.card>button:hover {
+    border-color: var(--pri);
+    color: #2196F3;
+    transition: 1s;
+    top: -2px;
+}
+
+.card>p {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.foot {
+    text-align: center;
+    background-color: rgb(34, 26, 108);
+    height: 25vh;
+    color: white;
+    padding-top: 10px;
+}
